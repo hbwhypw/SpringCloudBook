@@ -2,7 +2,6 @@ package com.didispace;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cloud.stream.annotation.rxjava.EnableRxJavaProcessor;
 import org.springframework.cloud.stream.annotation.rxjava.RxJavaProcessor;
 import org.springframework.context.annotation.Bean;
 
@@ -17,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 //@EnableBinding(value = {Processor.class})
 public class App1 {
 
-    private static Logger logger = LoggerFactory.getLogger(HelloApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(StreamConsumer.class);
 
 //    @StreamListener(Processor.INPUT)
 //    @SendTo(Processor.OUTPUT)

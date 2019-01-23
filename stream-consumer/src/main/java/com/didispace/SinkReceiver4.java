@@ -15,7 +15,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 @EnableBinding(value = {Sink.class})
 public class SinkReceiver4 {
 
-    private static Logger logger = LoggerFactory.getLogger(HelloApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(StreamConsumer.class);
 
 
     @StreamListener(Sink.INPUT)

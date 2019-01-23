@@ -6,22 +6,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = HelloApplication.class)
+@SpringApplicationConfiguration(classes = StreamConsumer.class)
 @WebAppConfiguration
 //@DirtiesContext
-public class HelloApplicationTests2 {
+public class StreamConsumerTests3 {
 
 	@Autowired @Qualifier("input")
 	private MessageChannel output;
 
 	@Test
 	public void contextLoads() {
-		output.send(MessageBuilder.withPayload("From MessageChannel").build());
+		Message<String> message = MessageBuilder.withPayload("{\"name\":\"didi\", \"age\":30}").build();
+		output.send(message);
 	}
 
 }

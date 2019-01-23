@@ -2,14 +2,12 @@ package com.didispace;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.messaging.converter.MessageConverter;
 
 @SpringBootApplication
-public class HelloApplication {
+public class StreamProducer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
+		SpringApplication.run(StreamProducer.class, args);
 	}
 
 }
